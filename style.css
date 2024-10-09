@@ -1,0 +1,136 @@
+/* Estilo básico para a página */
+body {
+    padding: 2rem;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+header {
+    width: 600px;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    background-color: #35424a;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para ambos os elementos */
+button,
+label[for="importFile"] {
+    border-radius: 0.5rem;
+    background-color: #35424a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover para ambos */
+button:hover,
+label[for="importFile"]:hover {
+    background-color: #0a3a41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Opcional: Remover o foco do label para parecer um botão */
+label[for="importFile"]:focus {
+    outline: none;
+}
+
+/* deixar checkboxes verdes 0a3a41 quando selecionadas ao invez de azul */
+input[type="checkbox"]:checked {
+    background-color: #0a3a41;
+}
+
+.buttonsContainer {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.buttonsZoomContainer {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 0.5rem; 
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.canvas {
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+}
+
+section {
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.divCenter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a div de exemplo */
+.example-container {
+    background-color: #eaeaea; /* Cinza claro */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    text-align: left; /* Para alinhar o texto à esquerda */
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página Básica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Suspicious Path Viewer</h1>
+    </header>
+
+    <main>
+        <section style="text-align: left;">
+            <h3>Como usar:</h3>
+            <ul>
+                <li>Insira o arquivo de entrada no formato especificado abaixo e clique em "Selecionar Arquivo" usando o formato .txt.</li>
+                <li>O arquivo de entrada deve conter as informações de cada direção (EAST, WEST, NORTH e SOUTH). Mais abaixo é possível encontrar um exemplo do formato.</li>
+                <li>Após selecionar o arquivo, clique em "Salvar PNG" para salvar a imagem gerada.</li>
+                <li>
+                    Habilitando as opções "Valores" ou "Direções" é adicionado ao grid os valores de cada ligação entre os quadrados ou as direções de cada ligação.
+                </li>
+            </ul>
+        </section>
+        
+        <div class="buttonsZoomContainer">
+            <div>
+                <button id="zoom+">+</button>
+                <button id="zoom-">-</button>
+            </div>
+            <div>
+                <!-- checkboxes pra habilitar ver Valores e outra pra habilitar ver Direções -->
+                <input type="checkbox" id="showValues" >
+                <label for="showValues">Valores</label>
+                <input type="checkbox" id="showDirections" >
+                <label for="showDirections">Direções</label>
+            </div>
+        </div>
+        
+        <canvas class="canvas" id="canvas" width="600" height="600"></canvas>
+        
+        <div class="buttonsContainer">
+                <input type="file" id="importFile" style="display: none;" />
+                <label for="importFile" id="importFileLabel">Selecionar Arquivo</label>
+                <button id="save">Salvar PNG</button>
+        </div>
+        <section>
+            <h4>Exemplo de arquivo de entrada:</h4>
+            <div class="example-container">
+                <p class="formatted-text">
+                    EAST:<br>
+                    0 0 0 0 0 <br>
+                    0 1 1 1 0 <br>
+                    0 1 1 1 0 <br>
+                    0 0 0 0 0 <br>
+                    0 0 0 0 0 <br>
+                    WEST:<br>
+                    0 1 0 0 0 <br>
+                    0 3 3 1 1 <br>
+                    0 0 0 0 0 <br>
+                    0 2 2 2 2 <br>
+                    0 0 1 1 0 <br>
+                    NORTH:<br>
+                    0 0 0 0 0 <br>
+                    0 0 0 0 0 <br>
+                    0 1 0 0 0 <br>
+                    0 1 0 0 0 <br>
+                    0 1 0 0 0 <br>
+                    SOUTH:<br>
+                    1 0 0 0 0 <br>
+                    4 1 0 0 3 <br>
+                    3 1 0 0 4 <br>
+                    1 0 0 0 1 <br>
+                    0 0 0 0 0
+                </p>
+            </div>
+            <p style="text-align: left;">
+                Onde cada posição na matriz representa um quadrado no grid. Cada uma das matrizes representa uma direção e 
+                o valor de cada ligação entre os quadrados. Para entender melhor, veja a imagem abaixo.
+            </p>
+            <div class="divCenter">
+                <img src="imagemQuadrado.jpeg" width="350px" alt="Exemplo de grid">
+            </div>
+        </section>
+        <section>
+            <h4>Sobre o projeto:</h4>
+                <p style="text-align: left;">
+                    Texto foda dando uma breve explicação sobre o projeto só pra caso alguém bater o olho e quiser saber o que é isso.
+                    Esse texto o Sandler que vai me mandar e caso ele não esteja aqui é pq ele é bobão Loren Ipsum dolor sit amet consectetur
+                    adipiscing elit. Nulla nec purus nec nunc tincidunt tincidunt. Nulla facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi 
+                    Para saber mais acesse: <a target="_blank" href="">Suspicious Path</a>.
+                </p>
+        </section>
+        <p style="margin-bottom: 2rem;">
+            2024 - Desenvolvido por 
+            <a target="_blank" href="https://franciscoborba.tech">Borba</a> 
+            & 
+            <a target="_blank" href="https://github.com/SandlerRodrigo">Sandler</a>
+        </p>
+    </main>
+    <script src="utils.js"></script>
+    <script src="grid.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
